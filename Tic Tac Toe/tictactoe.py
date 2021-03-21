@@ -1,2 +1,7 @@
-world = "Hello World!!"
-print(world)
+ttt_board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
+
+def drawBoard():
+    pass
+
+def ttt():
+    pass
