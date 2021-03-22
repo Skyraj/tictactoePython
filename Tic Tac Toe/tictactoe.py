@@ -28,19 +28,30 @@ def checkVictory():
         return False
 
 def ttt():
-    turn_count = 0
+    turn_count = 1
     turn = 'X'
     print("Player {} goes first!".format(turn))
 
-    while (turn_count <= 9):
-        x, y = input("Input Position: ").split()
-        x, y = int(x), int(y)
-        if board[x][y] == ' ':
-            board[x][y] = turn
-        # Need to elaborate on error case to ask for input again
-        else:
-            print("Position taken!")
-        
+    while (turn_count < 10):
+        while True:
+            try:
+                x, y = input("Enter index: ").split()
+                x, y = int(x), int(y)
+                
+                if board[x][y] == ' ':
+                    board[x][y] = turn
+                else:
+                    raise Exception()
+            except ValueError:
+                print("2 integer inputs separated by a space is required!")
+                continue
+            except:
+                print("Index taken!")
+                turn = 'O'
+                continue
+            else:
+                break
+
         drawBoard()
         if checkVictory():
             break
@@ -52,7 +63,9 @@ def ttt():
 
         turn_count += 1
     
-    if turn_count % 2 == 0:
+    if turn_count == 10:
+        print("Tie!")
+    elif turn_count % 2 == 0:
         print("Player X Wins!")
     else:
         print("Player O Wins!")
