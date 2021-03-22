@@ -1,7 +1,7 @@
 board = [[' ', ' ', ' '], [' ', ' ', ' '], [' ', ' ', ' ']]
 
 def drawBoard():
-    print(" " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " ")
+    print("\n " + board[0][0] + " | " + board[0][1] + " | " + board[0][2] + " ")
     print("---+---+---")
     print(" " + board[1][0] + " | " + board[1][1] + " | " + board[1][2] + " ")
     print("---+---+---")
@@ -70,6 +70,6 @@ def ttt():
     else:
         print("Player X Wins!")
 
-print("Let's Play Tic Tac Toe!\n")
+print("Let's Play Tic Tac Toe!")
 drawBoard()
 ttt()
