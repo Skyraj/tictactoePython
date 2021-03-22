@@ -30,9 +30,9 @@ def checkVictory():
 def ttt():
     turn_count = 1
     turn = 'X'
-    print("Player {} goes first!".format(turn))
 
     while (turn_count < 10):
+        print("Turn {}: Player {}'s turn".format(turn_count, turn))
         while True:
             try:
                 x, y = input("Enter index: ").split()
@@ -66,9 +66,9 @@ def ttt():
     if turn_count == 10:
         print("Tie!")
     elif turn_count % 2 == 0:
-        print("Player X Wins!")
-    else:
         print("Player O Wins!")
+    else:
+        print("Player X Wins!")
 
 print("Let's Play Tic Tac Toe!\n")
 drawBoard()
