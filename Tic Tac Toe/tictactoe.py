@@ -70,7 +70,6 @@ def ttt():
     else:
         print("Player X Wins!")
 
-
 # Terminal Version of Tic Tac Toe
 print("Let's Play Tic Tac Toe!")
 drawBoard()
